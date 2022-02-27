@@ -24,14 +24,15 @@ public class Main {
             System.out.println(map.get(temp));
         }
 
-        String engKey = "";                                                   // Поиск ключа по значению
-        for (String k : map.keySet()){
-            if (map.get(k).equals(temp) ) {                                   // написать проверку на наличие значеничя
-                engKey = k;                                                   // если нет, не начинать
-                break;
-            }
-        }
+        if (map.containsValue(temp)) {
+              String engKey = "";                                             // Поиск ключа по значению
+              for (String k : map.keySet()) {
+                   if (map.get(k).equals(temp)) {
+                   engKey = k;
+                   break;
+                   }
+              }
         System.out.println(engKey);
-
+        }
     }
 }
