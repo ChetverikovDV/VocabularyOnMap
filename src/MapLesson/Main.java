@@ -1,10 +1,13 @@
 package MapLesson;
-import java.util.*;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
 
 public class Main {
     public static  void main(String[] args){
 
-        Vocabulary generate = new Vocabulary();
+        Vocabulary generate = new Vocabulary();                              // Тем словарь
         HashMap<String, String> map = generate.generateMap();
 
         Scanner scanner = new Scanner(System.in);

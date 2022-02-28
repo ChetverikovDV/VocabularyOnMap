@@ -1,9 +1,10 @@
 package MapLesson;
 // Наш словарик
+
 import java.util.HashMap;
 
 public class Vocabulary {
-    public HashMap<String, String> generateMap(){
+    public HashMap<String, String> generateMap() {
         HashMap<String, String> map = new HashMap<>();
         map.put("hat", "шляпа");
         map.put("ball", "мяч");
