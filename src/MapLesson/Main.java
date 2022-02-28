@@ -4,7 +4,7 @@ import java.util.*;
 public class Main {
     public static  void main(String[] args){
 
-        Actions generate = new Actions();
+        Vocabulary generate = new Vocabulary();
         HashMap<String, String> map = generate.generateMap();
 
         Scanner scanner = new Scanner(System.in);
