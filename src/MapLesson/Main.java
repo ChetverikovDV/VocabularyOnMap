@@ -18,6 +18,9 @@ public class Main {
         String value = scanner.next();
         map.put(keyWord, value);
 
+        System.out.println(map);
+        System.out.println("Удалим стол");                                    // это все
+        map.remove("стол");                                              // удаляем стол
         System.out.println(map);                                             // это все
 
 
