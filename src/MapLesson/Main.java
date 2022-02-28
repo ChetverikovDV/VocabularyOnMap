@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
     public static  void main(String[] args){
-        Map<String, String> map = new HashMap<>();
+        HashMap<String, String> map = new HashMap<>();
         map.put("hat", "шляпа");
         map.put("ball", "мяч");
         map.put("sword", "меч");
@@ -24,15 +24,9 @@ public class Main {
             System.out.println(map.get(temp));
         }
 
-        if (map.containsValue(temp)) {
-              String engKey = "";                                             // Поиск ключа по значению
-              for (String k : map.keySet()) {
-                   if (map.get(k).equals(temp)) {
-                   engKey = k;
-                   break;
-                   }
-              }
-        System.out.println(engKey);
+        if (map.containsValue(temp)) {                                       // Вывод значения по ключу
+            Actions key = new Actions();
+            System.out.println(key.findKey(map, temp));
         }
     }
 }
