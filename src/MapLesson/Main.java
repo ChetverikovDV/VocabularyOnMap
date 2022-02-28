@@ -7,10 +7,19 @@ import java.util.Scanner;
 public class Main {
     public static  void main(String[] args){
 
-        Vocabulary generate = new Vocabulary();                              // Тем словарь
+        Vocabulary generate = new Vocabulary();                              // Там словарь
         HashMap<String, String> map = generate.generateMap();
 
         Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Добавим слово ");                                // добавляем пару (вынести в класс)
+        String keyWord = scanner.next();
+        System.out.println("Добавим перевод ");
+        String value = scanner.next();
+        map.put(keyWord, value);
+
+        System.out.println(map);                                             // это все
+
 
         String temp = scanner.next();                                         // Вводим слово
 
