@@ -11,19 +11,15 @@ public class Main {
         HashMap<String, String> map = generate.generateMap();
 
         Scanner scanner = new Scanner(System.in);
+        Actions action = new Actions();
 
-        System.out.println("Добавим слово ");                                // добавляем пару (вынести в класс)
-        String keyWord = scanner.next();
-        System.out.println("Добавим перевод ");
-        String value = scanner.next();
-        map.put(keyWord, value);
+        String keyWord = "";
+        String value = "";
 
-        System.out.println(map);
-        System.out.println("Удалим стол");                                    // это все
-        map.remove("стол");                                              // удаляем стол
-        System.out.println(map);                                             // это все
+        action.addNewPair(map, keyWord, value);                               // заполняем словарь
+        System.out.println(map);                                              // в цикле пока не 0
 
-
+        System.out.println("Что хотим перевести? ");
         String temp = scanner.next();                                         // Вводим слово
 
         if (!map.containsKey(temp) && !map.containsValue(temp)){              // Проверка наличия
@@ -35,7 +31,7 @@ public class Main {
         }
 
         if (map.containsValue(temp)) {                                       // Вывод значения по ключу
-            Actions key = new Actions();
+            FindKey key = new FindKey();
             System.out.println(key.findKey(map, temp));
         }
     }
