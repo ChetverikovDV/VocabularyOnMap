@@ -1,6 +1,7 @@
 package MapLesson;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -19,8 +20,9 @@ public class Main {
         action.addNewPair(map, keyWord, value);                               // заполняем словарь
         System.out.println(map);                                              // в цикле пока не 0
 
+
         System.out.println("Что хотим перевести? ");
-        String temp = scanner.next();                                         // Вводим слово
+        String temp = scanner.next().toLowerCase(Locale.ROOT);                                         // Вводим слово
 
         if (!map.containsKey(temp) && !map.containsValue(temp)){              // Проверка наличия
             System.out.println("Не найдено");                                 // по обоим параметрам

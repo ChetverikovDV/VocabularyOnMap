@@ -1,6 +1,7 @@
 package MapLesson;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Actions {
@@ -8,11 +9,11 @@ public class Actions {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Введите слово(англ.)");
-            key = scanner.next();
+            key = scanner.next().toLowerCase(Locale.ROOT);
             if (key.equals("0"))
                 break;
             System.out.println("Введите перевод(рус.)");
-            value = scanner.next();
+            value = scanner.next().toLowerCase(Locale.ROOT);
             map.put(key, value);
             System.out.println(map);
         }
