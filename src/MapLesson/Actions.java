@@ -15,7 +15,7 @@ public class Actions {
             System.out.println("Введите перевод(рус.)");
             value = scanner.next().toLowerCase(Locale.ROOT);
             if (map.containsKey(key)){
-                value = map.get(key)+ "," +value;                                 //тупо приклеил
+                value = map.get(key)+ "," +value;            //тупо приклеил
             }
             map.put(key, value);
             System.out.println(map);

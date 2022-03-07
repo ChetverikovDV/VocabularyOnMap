@@ -1,8 +1,6 @@
 package MapLesson;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Scanner;
+import java.util.*;
 
 
 public class Main {
@@ -36,5 +34,7 @@ public class Main {
             FindKey key = new FindKey();
             System.out.println(key.findKey(map, temp));
         }
+        Map sortedMap = new TreeMap<>(map);                                  //Не хранит, но показывает
+        sortedMap.entrySet().forEach(System.out::println);                   //Как рыбов
     }
 }

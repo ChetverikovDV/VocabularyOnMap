@@ -2,6 +2,7 @@ package MapLesson;
 // Наш словарик
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 public class Vocabulary {
