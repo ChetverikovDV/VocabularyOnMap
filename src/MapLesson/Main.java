@@ -7,7 +7,7 @@ public class Main {
     public static  void main(String[] args){
 
         Vocabulary generate = new Vocabulary();                              // Там словарь
-        HashMap<String, String> map = generate.generateMap();
+       TreeMap<String, String> map = generate.generateMap();
 
         Scanner scanner = new Scanner(System.in);
         Actions action = new Actions();
@@ -34,7 +34,6 @@ public class Main {
             FindKey key = new FindKey();
             System.out.println(key.findKey(map, temp));
         }
-        Map sortedMap = new TreeMap<>(map);                                  //Не хранит, но показывает
-        sortedMap.entrySet().forEach(System.out::println);                   //Как рыбов
+        System.out.println(map);
     }
 }

@@ -3,9 +3,10 @@ package MapLesson;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class Actions {
-    public void addNewPair(HashMap<String, String> map, String key, String value) {
+    public void addNewPair(TreeMap<String, String> map, String key, String value) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Введите слово(англ.)");
