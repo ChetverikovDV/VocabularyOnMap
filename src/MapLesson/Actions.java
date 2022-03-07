@@ -14,6 +14,12 @@ public class Actions {
                 break;
             System.out.println("Введите перевод(рус.)");
             value = scanner.next().toLowerCase(Locale.ROOT);
+            if (map.containsKey(key)){
+                value = map.get(key)+ "," +value;
+                map.put(key,value);
+                System.out.println(map);
+                break;
+            }
             map.put(key, value);
             System.out.println(map);
         }
