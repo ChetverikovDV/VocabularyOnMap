@@ -16,9 +16,6 @@ public class Actions {
             value = scanner.next().toLowerCase(Locale.ROOT);
             if (map.containsKey(key)){
                 value = map.get(key)+ "," +value;            //тупо приклеил
-                map.put(key,value);
-                System.out.println(map);
-                break;
             }
             map.put(key, value);
             System.out.println(map);
