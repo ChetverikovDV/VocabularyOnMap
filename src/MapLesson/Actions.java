@@ -1,9 +1,6 @@
 package MapLesson;
 
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Actions {
     public void addNewPair(TreeMap<String, String> map, String key, String value) {
@@ -16,7 +13,8 @@ public class Actions {
             System.out.println("Введите перевод(рус.)");
             value = scanner.next().toLowerCase(Locale.ROOT);
             if (map.containsKey(key)){
-                value = map.get(key)+ "," +value;            //тупо приклеил
+                value = map.get(key)+ "," +value;
+                System.out.println(Arrays.toString(value.split(","))); // Пробник
             }
             map.put(key, value);
             System.out.println(map);

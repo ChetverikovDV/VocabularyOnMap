@@ -11,7 +11,7 @@ public class Vocabulary {
       TreeMap<String, String> map = new TreeMap<>();
         map.put("haT".toLowerCase(Locale.ROOT), "шЛяпа".toLowerCase(Locale.ROOT)); //для наглядности
         map.put("ball", "мяч");
-        map.put("sword", "меч");
+        map.put("sword", "меч,шпага");
         map.put("ant", "муравей");
         map.put("exit", "выход");
         map.put("table", "стол");
