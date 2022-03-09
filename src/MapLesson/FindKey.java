@@ -9,7 +9,7 @@ public class FindKey {
             for (int i = 0; i < map.get(k).split(",").length; i++) {
                 System.out.println(map.get(k).split(",")[i]);
 
-                if ((map.get(k).split(",")[i]).equals(value)) {
+                if ((map.get(k).split(",")[i].strip()).equals(value)) {
                     System.out.println("key - "+k);
                     System.out.println("iterator - "+i);
                     return k;
