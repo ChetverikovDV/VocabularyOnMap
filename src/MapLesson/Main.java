@@ -29,11 +29,12 @@ public class Main {
         if (map.containsKey(temp)) {                                          // Вывод значения по ключу
             System.out.println(temp +" - "+Arrays.toString(map.get(temp).split(",")));
         }
-
-        if (map.containsValue(temp)) {                                       // Вывод ключа по значению
-            FindKey key = new FindKey();
-            System.out.println(key.findKey(map, temp));
+        else{
+            FindKey key = new FindKey();                                          // Вывод ключа по значению
+            System.out.println("Перевод слова " + temp + " - " + key.findKey(map, temp));
+            System.out.println("англ."+key.findKey(map, temp) +" - рус." +Arrays.toString(map.get(key.findKey(map, temp)).split(",")));
         }
+
         //System.out.println(map);
     }
 }
