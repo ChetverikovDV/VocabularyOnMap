@@ -4,10 +4,10 @@ import java.util.*;
 
 
 public class Main {
-    public static  void main(String[] args){
+    public static void main(String[] args) {
 
         Vocabulary generate = new Vocabulary();                              // Там словарь
-       TreeMap<String, String> map = generate.generateMap();
+        TreeMap<String, String> map = generate.generateMap();
 
         Scanner scanner = new Scanner(System.in);
         Actions action = new Actions();
@@ -20,24 +20,24 @@ public class Main {
 
 
         System.out.println("Что хотим перевести? ");
-        String temp = scanner.next().toLowerCase(Locale.ROOT);                                         // Вводим слово
-
-        //   if (!map.containsKey(temp) && !map.containsValue(temp)){              // Проверка наличия
-        //    System.out.println("Не найдено");                                 // по обоим параметрам
-        //}
+        String temp = scanner.next().toLowerCase(Locale.ROOT);                // Вводим слово
 
         if (map.containsKey(temp)) {                                          // Вывод значения по ключу
-            System.out.println(temp +" - "+Arrays.toString(map.get(temp).split(",")));
-        }
-        else{
+            System.out.println(temp + " - " + Arrays.toString(map.get(temp).split(",")));
+        } else {
             FindKey key = new FindKey();
             System.out.println("Перевод слова " + temp + " - " + key.findKey(map, temp));
             if (!key.findKey(map, temp).equals("отсутствует")) {                              // Вывод ключа по значению
                 System.out.println("англ." + key.findKey(map, temp) + " - рус."
-                + Arrays.toString(map.get(key.findKey(map, temp)).split(",")));
+                        + Arrays.toString(map.get(key.findKey(map, temp)).split(",")));
             }
         }
-
-        //System.out.println(map);
+//        for (String value1 : map.values()) {
+//            System.out.println(value1);
+//            if (value1.equals()){
+//                System.out.println("Это вот эта "+value1);
+//
+//            }
+//        }
     }
 }
