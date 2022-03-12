@@ -32,12 +32,6 @@ public class Main {
                         + Arrays.toString(map.get(key.findKey(map, temp)).split(",")));
             }
         }
-//        for (String value1 : map.values()) {
-//            System.out.println(value1);
-//            if (value1.equals()){
-//                System.out.println("Это вот эта "+value1);
-//
-//            }
-//        }
+
     }
 }
