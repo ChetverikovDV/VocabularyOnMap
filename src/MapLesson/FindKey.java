@@ -16,6 +16,6 @@ public class FindKey {
                 }
             }
         }
-        return "";
+        return "отсутствует";
     }
 }
